@@ -8,6 +8,8 @@ Date : 16.09.2026
 
 Purpose : Projet File Explorer Tkinter
 
+Version : Final
+
 """
 
 import tkinter as tk # pour l'interface graphique
