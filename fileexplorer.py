@@ -118,7 +118,7 @@ def get_cpu_info():
         minutes = (total_seconds % 3600) // 60
         seconds = total_seconds % 60
         uptime_str = f"{hours:02}:{minutes:02}:{seconds:02}"
-        usage = f"{psutil.cpu_percent(interval=None):.1f} %"
+        usage = f"{psutil.cpu_percent(interval=0.1):.1f} %"
         return speed, uptime_str, usage
     except Exception:
         return "Unknown", "Unknown", "Unknown"
