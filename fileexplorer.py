@@ -120,7 +120,7 @@ def get_cpu_info():
         minutes = (total_seconds % 3600) // 60
         seconds = total_seconds % 60
         uptime_str = f"{hours:02}:{minutes:02}:{seconds:02}"
-        usage = f"{psutil.cpu_percent(interval=0.1):.1f} %"
+        usage = f"{psutil.cpu_percent(interval=0.5):.1f} %"
         return speed, uptime_str, usage
     except Exception:
         return "Unknown", "Unknown", "Unknown"
@@ -129,15 +129,13 @@ def get_cpu_info():
 def get_os_info():
     try:
         key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,r"SOFTWARE\Microsoft\Windows NT\CurrentVersion")
-        edition = winreg.QueryValueEx(key, "ProductName")[0]
-        try:
-            version = winreg.QueryValueEx(key, "DisplayVersion")[0]
-        except:
-            version = "Unknown"
-
+        edition = winreg.QueryValueEx(key,"ProductName")[0]
+        build = int(winreg.QueryValueEx(key,"CurrentBuild")[0])
+    # Windows 11 = build >= 22000
+        if build >= 22000:edition = edition.replace("Windows 10","Windows 11")
         install_timestamp = winreg.QueryValueEx(key,"InstallDate")[0]
         install_date = datetime.fromtimestamp(install_timestamp).strftime("%d.%m.%Y")
-        return edition, version, install_date
+        return edition, build, install_date
     except Exception:
         return "Unknown", "Unknown", "Unknown"
 
