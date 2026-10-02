@@ -122,7 +122,7 @@ Met à jour automatiquement les informations CPU toutes les 1000ms (1 seconde).
 ## Auteur
 
 - **Nom** : Emel Keres
-- **Date** : 28.09.2026
+- **Date** : 01.10.2026
 - **Classe** : SI-C3b
 
 ## Licence
