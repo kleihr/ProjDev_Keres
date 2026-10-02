@@ -4,7 +4,7 @@ Name : fileexplorer.py
 
 Author : Emel Keres
 
-Date : 28.09.2026
+Date : 01.10.2026
 
 Purpose : Projet File Explorer Tkinter
 
