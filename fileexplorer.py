@@ -19,7 +19,6 @@ from tkinter import filedialog # boite dialogue pour chercher un répertoire
 from pathlib import Path # fonctions de répertoire
 from datetime import datetime  # pour la date de modification
 from PIL import Image, ImageTk # pour importer les images qui sont en jpg, pour le logo de la fenêtre
-import platform # pour les infos sur le pc
 import psutil # pour les infos sur le pc (CPU et le temps de fonctionnement)
 import winreg # pour les registres Windows
 
