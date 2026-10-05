@@ -59,7 +59,6 @@ L'application est organisée en trois sections principales :
 - **os** : Vérification des permissions
 - **datetime** : Gestion des dates et heures
 - **Pillow (PIL)** : Gestion des images
-- **platform** : Informations système
 - **psutil** : Informations CPU et uptime
 - **winreg** : Accès aux registres Windows pour les infos OS
 
