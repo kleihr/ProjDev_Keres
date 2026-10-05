@@ -4,7 +4,7 @@ Name : fileexplorer.py
 
 Author : Emel Keres
 
-Date : 01.10.2026
+Date : 05.10.2026
 
 Purpose : Projet File Explorer Tkinter
 
@@ -126,6 +126,7 @@ def get_cpu_info():
         return "Unknown", "Unknown", "Unknown"
 
 # informations Windows
+# aide de l'ia pour cette fonction
 def get_os_info():
     try:
         key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,r"SOFTWARE\Microsoft\Windows NT\CurrentVersion")
